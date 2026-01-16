@@ -1,20 +1,47 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
+import { motion, useSpring, useMotionValue } from "framer-motion";
 import { 
   Linkedin, Trophy, Music, Heart, Send, Youtube, 
-  Star, GraduationCap, Activity, Lightbulb, Phone, Mail 
+  Star, BookOpen, Activity, GraduationCap, Users, Lightbulb, Phone, Mail 
 } from "lucide-react";
 
 export default function Home() {
+  // Настройка курсора
+  const cursorX = useMotionValue(-100);
+  const cursorY = useMotionValue(-100);
+  const springConfig = { damping: 25, stiffness: 700 };
+  const cursorXSpring = useSpring(cursorX, springConfig);
+  const cursorYSpring = useSpring(cursorY, springConfig);
+
+  useEffect(() => {
+    const moveCursor = (e: MouseEvent) => {
+      cursorX.set(e.clientX - 16);
+      cursorY.set(e.clientY - 16);
+    };
+    window.addEventListener("mousemove", moveCursor);
+    return () => window.removeEventListener("mousemove", moveCursor);
+  }, [cursorX, cursorY]);
+
   return (
     <div className="min-h-screen bg-[#0f1115] text-white font-sans selection:bg-blue-500/30 overflow-x-hidden relative">
-      <main className="max-w-6xl mx-auto px-4 md:px-12 pt-10 md:pt-16 pb-32 relative">
-        
-        {/* GLOW EFFECTS */}
-        <div className="absolute top-[-5%] left-[-10%] w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" />
+      
+      {/* КУРСОР */}
+      <motion.div
+        className="fixed top-0 left-0 w-8 h-8 border-2 border-blue-500 rounded-full pointer-events-none z-[9999] hidden md:block"
+        style={{ x: cursorXSpring, y: cursorYSpring }}
+      />
 
+      {/* GLOW EFFECTS (ЯРКИЕ ПЯТНА) */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px]" />
+        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[100px]" />
+        <div className="absolute top-[60%] left-[-5%] w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] bg-red-600/15 rounded-full blur-[130px]" />
+      </div>
+
+      <main className="max-w-6xl mx-auto px-6 md:px-12 pt-16 pb-32 relative z-10">
         {/* HERO SECTION */}
         <section className="relative mb-24 flex flex-col md:flex-row items-center justify-between gap-10 z-10">
           <div className="flex-1 order-2 md:order-1 text-center md:text-left">
@@ -23,9 +50,9 @@ export default function Home() {
             </div>
             <h1 className="text-4xl md:text-7xl lg:text-[6vw] font-black tracking-tighter uppercase leading-[0.9] mb-6">
               Dariya <br /> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400">
-                Murzakhmetova
-              </span>
+              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+  Murzakhmetova
+</span>
             </h1>
             <p className="text-lg md:text-xl text-blue-400 font-bold italic mb-4">Junior Student at NIS Astana</p>
             <p className="text-gray-300 text-base md:text-lg font-light leading-relaxed max-w-xl italic mx-auto md:mx-0">
@@ -96,44 +123,78 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* 3. ECONOMICS */}
-        <section className="mb-24 border-t border-white/10 pt-16">
-          <div className="flex items-center gap-4 mb-8 text-yellow-500 pb-2">
+     {/* 3. ECONOMICS ACHIEVEMENTS + QAZ ECONOMICS */}
+        <section className="mb-32">
+          <div className="flex items-center gap-4 mb-8 text-yellow-500 border-b border-white/10 pb-4">
             <Trophy size={28} />
-            <h2 className="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter text-white">3. Economics Achievements</h2>
+            <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">3. Economics Achievements</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-4 mb-10">
-            <div className="p-5 bg-white/5 border-l-2 border-yellow-500 text-sm md:text-base italic">Asian Economics Olympiad (2025): <span className="text-white font-bold">9th place</span></div>
-            <div className="p-5 bg-white/5 border-l-2 border-yellow-500 text-sm md:text-base italic text-white font-bold">Major Economics Olympiad (2025): Finalist</div>
-          </div>
-          <div className="bg-blue-500/5 p-6 md:p-10 rounded-[2.5rem] border border-blue-500/10">
-            <h4 className="text-blue-400 font-black uppercase text-[10px] tracking-widest mb-4">Qaz Economics (2024 – Present)</h4>
-            <ul className="space-y-4 text-gray-300 text-sm md:text-base italic font-light">
-              <li className="flex gap-3"><span>•</span> <span>Developing digital content for economics education platform</span></li>
-              <li className="flex gap-3"><span>•</span> <span>Translating complex economic concepts into clear materials</span></li>
-            </ul>
+          <div className="space-y-12">
+            <div className="grid md:grid-cols-2 gap-6 text-xl italic font-light">
+               <div className="p-6 border-l-2 border-yellow-500/30 bg-white/5 text-gray-300">
+                 Asian Economics Olympiad (2025): <span className="text-white font-bold">9th place</span>
+               </div>
+               <div className="p-6 border-l-2 border-yellow-500/30 bg-white/5 text-white font-bold">
+                 Major Economics Olympiad (2025): Finalist
+               </div>
+            </div>
+            
+            <div className="max-w-4xl">
+               <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic border-b border-white/5 pb-10">
+                 Co-Author of an independent research paper on <span className="text-white font-bold">Market-Led Growth and the Development Assistance</span>, analyzing development strategies and the effectiveness of economic policy.
+               </p>
+
+               {/* QAZ ECONOMICS — ПОЛНЫЙ ТЕКСТ ТУТ */}
+               <div className="mt-12 p-8 md:p-10 bg-blue-500/5 rounded-[2.5rem] border border-blue-500/20">
+                  <h4 className="text-blue-400 font-black uppercase text-sm mb-2 tracking-[0.2em]">Qaz Economics — Educational Organization</h4>
+                  <p className="text-gray-500 text-xs italic mb-8 uppercase font-bold tracking-widest">August 2024 – Present</p>
+                  <ul className="space-y-6 text-gray-300 text-lg md:text-xl font-light italic">
+                    <li className="flex gap-4">
+                      <span className="text-blue-500 font-bold">•</span> 
+                      <span>Developing and manage digital content for an economics education platform aimed at students and young learners</span>
+                    </li>
+                    <li className="flex gap-4">
+                      <span className="text-blue-500 font-bold">•</span> 
+                      <span>Translating complex economic concepts into clear, engaging, and accessible materials</span>
+                    </li>
+                    <li className="flex gap-4">
+                      <span className="text-blue-500 font-bold">•</span> 
+                      <span>Designing content strategies to increase outreach, engagement, and public understanding of economics</span>
+                    </li>
+                  </ul>
+               </div>
+            </div>
           </div>
         </section>
 
-        {/* 4. VOLUNTEER */}
-        <section className="mb-24 border-t border-white/10 pt-16">
-          <div className="flex items-center gap-4 mb-8 text-red-500">
-            <Heart size={28} />
-            <h2 className="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter text-white">4. Volunteer Experience</h2>
+        {/* 4. VOLUNTEER EXPERIENCE — ПОЛНЫЙ ТЕКСТ ТУТ */}
+        <section className="mb-32 border-t border-white/10 pt-16">
+          <div className="flex items-center gap-4 mb-10 text-red-500">
+            <Heart size={32} />
+            <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">4. Volunteer Experience</h2>
           </div>
-          <div className="group rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/[0.02]">
-            <div className="grid md:grid-cols-3">
-              <div className="md:col-span-1 h-[220px] md:h-full">
-                <img src="/rfa.jpg" className="w-full h-full object-cover" alt="Volunteer" />
+          <div className="relative rounded-[3rem] overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all">
+            <div className="grid md:grid-cols-3 items-center">
+              <div className="md:col-span-1 h-[300px] md:h-[450px] overflow-hidden">
+                <img 
+                  src="/rfa.jpg" 
+                  className="w-full h-full object-cover" 
+                  alt="Volunteer" 
+                />
               </div>
-              <div className="md:col-span-2 p-6 md:p-10">
-                <p className="text-gray-300 text-base md:text-lg italic font-light leading-relaxed">
-                  Over <span className="text-white font-bold underline decoration-red-500/30 underline-offset-4">70 hours</span> at public events like <span className="text-white">Jennifer Lopez, Comic Con, Dimash Qudaibergen, and more</span>. Developed teamwork and decision-making skills.
+              <div className="md:col-span-2 p-8 md:p-14">
+                <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-light italic">
+                  I have volunteered <span className="text-white font-bold underline decoration-red-500/30 underline-offset-4">over 70 hours</span> at large public events, supporting crowd coordination and safety management. 
+                  <br /><br />
+                  Events include international concerts and festivals such as <span className="text-white font-bold">Jennifer Lopez, Backstreet Boys, Comic Con, and Dimash Qudaibergen</span>. 
+                  <br /><br />
+                  Through this experience, I developed strong teamwork, responsibility, and decision-making skills in fast-paced, high-pressure environments.
                 </p>
               </div>
             </div>
           </div>
         </section>
+
         {/* 5. SPORTS & LEADERSHIP */}
         <section className="mb-24 border-t border-white/10 pt-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
