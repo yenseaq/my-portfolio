@@ -3,294 +3,246 @@
 import React from "react";
 import { 
   Linkedin, Trophy, Music, Heart, Send, Youtube, 
-  Star, BookOpen, Activity, GraduationCap, Users, Lightbulb, Phone, Mail
+  Star, GraduationCap, Activity, Lightbulb, Phone, Mail 
 } from "lucide-react";
 
 export default function Home() {
   return (
-    /* 1. ТУТ ЦВЕТ ФОНА (ТЕМНО-СИНИЙ ГРАФИТ) */
     <div className="min-h-screen bg-[#0f1115] text-white font-sans selection:bg-blue-500/30 overflow-x-hidden relative">
-      
-      <main className="max-w-6xl mx-auto px-6 md:px-12 pt-16 pb-32 relative">
+      <main className="max-w-6xl mx-auto px-4 md:px-12 pt-10 md:pt-16 pb-32 relative">
         
-        {/* --- ЯРКИЕ ПЯТНА (GLOW EFFECTS) --- */}
-        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] pointer-events-none z-0" />
-        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[100px] pointer-events-none z-0" />
-        <div className="absolute top-[60%] left-[-5%] w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[150px] pointer-events-none z-0" />
-        <div className="absolute bottom-[0%] right-[-5%] w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[130px] pointer-events-none z-0" />
+        {/* GLOW EFFECTS */}
+        <div className="absolute top-[-5%] left-[-10%] w-[300px] h-[300px] bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-[20%] right-[-10%] w-[300px] h-[300px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" />
 
-        {/* --- HERO SECTION --- */}
-        <section className="relative mb-32 flex flex-col md:flex-row items-center justify-between gap-10 z-10">
-          <div className="flex-1 order-2 md:order-1">
+        {/* HERO SECTION */}
+        <section className="relative mb-24 flex flex-col md:flex-row items-center justify-between gap-10 z-10">
+          <div className="flex-1 order-2 md:order-1 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium">
               <Star size={14} /> @yenseaq
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-[6vw] font-black tracking-tighter uppercase leading-[0.9] mb-6">
+            <h1 className="text-4xl md:text-7xl lg:text-[6vw] font-black tracking-tighter uppercase leading-[0.9] mb-6">
               Dariya <br /> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 animate-pulse">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400">
                 Murzakhmetova
               </span>
             </h1>
-            <p className="text-xl text-blue-400 font-bold italic mb-4">Junior Student at NIS Astana</p>
-            <p className="text-gray-400 text-lg font-light leading-relaxed max-w-xl italic">
+            <p className="text-lg md:text-xl text-blue-400 font-bold italic mb-4">Junior Student at NIS Astana</p>
+            <p className="text-gray-300 text-base md:text-lg font-light leading-relaxed max-w-xl italic mx-auto md:mx-0">
               IBDP Candidate. Highly motivated student with strong academic performance and a deep interest in economics and creative projects.
             </p>
           </div>
 
-          {/* КРУГЛОЕ ПЕРЕЛИВАЮЩЕЕСЯ ФОТО */}
           <div className="relative flex-shrink-0 order-1 md:order-2">
-            {/* Слой свечения (Градиент сзади) */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 via-purple-600 to-emerald-500 rounded-full blur-2xl opacity-50 animate-spin-slow"></div>
-            
-            {/* Оправа и само фото */}
-            <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] p-1.5 rounded-full bg-gradient-to-tr from-blue-500 via-purple-500 to-emerald-500">
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 via-purple-600 to-emerald-500 rounded-full blur-2xl opacity-30"></div>
+            <div className="relative w-[240px] h-[240px] md:w-[380px] md:h-[380px] p-1 rounded-full bg-gradient-to-tr from-blue-500 via-purple-500 to-emerald-500">
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#0f1115]">
-                <img 
-                  src="/amina.jpg" 
-                  className="w-full h-full object-cover scale-110 hover:scale-125 transition-transform duration-700" 
-                  alt="Dariya" 
-                />
+                <img src="/amina.jpg" className="w-full h-full object-cover" alt="Dariya" />
               </div>
             </div>
           </div>
         </section>
         {/* 1. ACADEMICS */}
-        <section className="mb-32">
+        <section className="mb-24">
           <div className="flex items-center gap-4 mb-8 text-blue-400 border-b border-white/10 pb-4">
             <GraduationCap size={28} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter">1. Academics</h2>
+            <h2 className="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter">1. Academics</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-6 bg-white/[0.03] p-8 rounded-3xl border border-white/5">
-              <p className="text-gray-300">I am an IBDP student approved for the following subjects:</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white/[0.03] p-6 md:p-8 rounded-3xl border border-white/5">
+              <p className="text-gray-300 mb-4 text-sm md:text-base italic">I am an IBDP student approved for the following subjects:</p>
               <div className="space-y-4">
                 <div>
-                  <span className="text-blue-400 text-xs font-bold uppercase tracking-widest">Higher Level (HL):</span>
-                  <p className="text-gray-400 italic">Economics, Geography, English B</p>
+                  <span className="text-blue-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Higher Level (HL):</span>
+                  <p className="text-gray-200 font-medium text-sm md:text-base">Economics, Geography, English B</p>
                 </div>
                 <div>
-                  <span className="text-blue-400 text-xs font-bold uppercase tracking-widest">Standard Level (SL):</span>
-                  <p className="text-gray-400 italic">Russian Language & Literature, Mathematics: Analysis & Approaches, Biology</p>
+                  <span className="text-blue-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Standard Level (SL):</span>
+                  <p className="text-gray-400 text-sm md:text-base italic">Russian Language & Literature, Math AA, Biology</p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center gap-4 bg-blue-500/5 p-8 rounded-3xl border border-blue-500/20">
+            <div className="flex flex-col justify-center gap-6 bg-blue-500/5 p-6 md:p-8 rounded-3xl border border-blue-500/20 text-center md:text-left">
               <div>
-                <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">Unweighted GPA</p>
-                <p className="text-4xl font-black">4.96 / 5.00</p>
+                <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">GPA</p>
+                <p className="text-3xl md:text-4xl font-black italic text-white">4.96 / 5.00</p>
               </div>
               <div>
-                <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">SAT Score</p>
-                <p className="text-4xl font-black">1560</p>
-                <p className="text-blue-400 text-sm font-medium italic">(EBRW 770 | Math 790)</p>
+                <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">SAT Score</p>
+                <p className="text-3xl md:text-4xl font-black text-blue-500 italic">1560</p>
+                <p className="text-blue-400 text-xs font-medium italic">(EBRW 770 | Math 790)</p>
               </div>
             </div>
           </div>
         </section>
-        {/* 2. SCHOOL OF ARTS */}
-<section className="mb-32 border-t border-white/10 pt-16">
-          <div className="flex items-center gap-4 mb-10 text-purple-400">
-            <Music size={32} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter">2. Music Background</h2>
-          </div>
-          <div className="relative rounded-[3rem] overflow-hidden border border-white/10 bg-white/[0.02]">
-            <div className="grid md:grid-cols-3 items-center">
-              <div className="md:col-span-2 p-10 order-2 md:order-1">
-                <p className="text-purple-400 font-bold text-xl mb-4 italic underline decoration-purple-500/30 underline-offset-4">
-                  2019 – 2024
-                </p>
-                <p className="text-gray-300 text-lg leading-relaxed font-light italic">
-                  I completed formal specialized music education with a focus on the <span className="text-white font-bold italic">Dombyra</span>, a traditional Kazakh folk instrument. 
-                  <br/><br/>
-                  During my studies, I performed as a <span className="text-white">Principal Musician</span> in the school orchestra and participated in numerous performances, showcasing Kazakh cultural heritage.
-                </p>
-              </div>
 
-              {/* ФОТО: Теперь оно второе, занимает 1 часть справа */}
-              <div className="md:col-span-1 h-[300px] grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden order-1 md:order-2">
-                <img src="/muzikalka.jpg" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="Music" />
+        {/* 2. MUSIC */}
+        <section className="mb-24 border-t border-white/10 pt-16">
+          <div className="flex items-center gap-4 mb-8 text-purple-400">
+            <Music size={28} />
+            <h2 className="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter text-white">2. School of Arts №2</h2>
+          </div>
+          <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/[0.02]">
+            <div className="grid md:grid-cols-3">
+              <div className="md:col-span-2 p-6 md:p-10 order-2 md:order-1">
+                <p className="text-purple-400 font-bold text-lg mb-3 italic">2019 – 2024</p>
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed italic font-light">
+                  Completed specialized music education (Dombyra). Performed as a <span className="text-white font-bold italic">Principal Musician</span> in the orchestra, showcasing Kazakh cultural heritage.
+                </p>
               </div>
-              
+              <div className="md:col-span-1 h-[250px] md:h-full order-1 md:order-2">
+                <img src="/muzikalka.jpg" className="w-full h-full object-cover" alt="Music" />
+              </div>
             </div>
           </div>
         </section>
-        {/* 3. ECONOMICS ACHIEVEMENTS */}
-        <section className="mb-32">
-          <div className="flex items-center gap-4 mb-8 text-yellow-500 border-b border-white/10 pb-4">
+        {/* 3. ECONOMICS */}
+        <section className="mb-24 border-t border-white/10 pt-16">
+          <div className="flex items-center gap-4 mb-8 text-yellow-500 pb-2">
             <Trophy size={28} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter">3. Economics Achievements</h2>
+            <h2 className="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter text-white">3. Economics Achievements</h2>
           </div>
-          <div className="space-y-12">
-            <div className="grid md:grid-cols-2 gap-6 text-xl italic font-light">
-               <div className="p-6 border-l-2 border-yellow-500/30 bg-white/5">Asian Economics Olympiad (2025): <span className="text-white font-bold">9th place</span></div>
-               <div className="p-6 border-l-2 border-yellow-500/30 bg-white/5">Major Economics Olympiad (2025): <span className="text-white font-bold">Finalist</span></div>
-            </div>
-            <div className="max-w-3xl">
-               <p className="text-gray-300 text-lg leading-relaxed italic border-b border-white/5 pb-8">
-                 Author of an independent research paper on <span className="text-white">Market-Led Growth and the Role of Financial Aid (Development Assistance)</span>, analyzing development strategies and the effectiveness of economic policy.
-               </p>
-               <div className="mt-12">
-                  <h4 className="text-blue-400 font-black uppercase text-sm mb-6 tracking-widest">Qaz Economics — Educational Organization</h4>
-                  <p className="text-gray-500 text-xs italic mb-4">August 2024 – Present</p>
-                  <ul className="space-y-4 text-gray-400 font-light">
-                    <li className="flex gap-4 italic">• <span>Develop and manage digital content for an economics education platform aimed at students and young learners</span></li>
-                    <li className="flex gap-4 italic">• <span>Translate complex economic concepts into clear, engaging, and accessible materials</span></li>
-                  </ul>
-               </div>
-            </div>
+          <div className="grid md:grid-cols-2 gap-4 mb-10">
+            <div className="p-5 bg-white/5 border-l-2 border-yellow-500 text-sm md:text-base italic">Asian Economics Olympiad (2025): <span className="text-white font-bold">9th place</span></div>
+            <div className="p-5 bg-white/5 border-l-2 border-yellow-500 text-sm md:text-base italic text-white font-bold">Major Economics Olympiad (2025): Finalist</div>
+          </div>
+          <div className="bg-blue-500/5 p-6 md:p-10 rounded-[2.5rem] border border-blue-500/10">
+            <h4 className="text-blue-400 font-black uppercase text-[10px] tracking-widest mb-4">Qaz Economics (2024 – Present)</h4>
+            <ul className="space-y-4 text-gray-300 text-sm md:text-base italic font-light">
+              <li className="flex gap-3"><span>•</span> <span>Developing digital content for economics education platform</span></li>
+              <li className="flex gap-3"><span>•</span> <span>Translating complex economic concepts into clear materials</span></li>
+            </ul>
           </div>
         </section>
-        {/* 4. VOLUNTEER EXPERIENCE */}
-        <section className="mb-32 border-t border-white/10 pt-16">
-          <div className="flex items-center gap-4 mb-10 text-red-500">
-            <Heart size={32} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter">4. Volunteer Experience</h2>
+
+        {/* 4. VOLUNTEER */}
+        <section className="mb-24 border-t border-white/10 pt-16">
+          <div className="flex items-center gap-4 mb-8 text-red-500">
+            <Heart size={28} />
+            <h2 className="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter text-white">4. Volunteer Experience</h2>
           </div>
-          <div className="relative rounded-[3rem] overflow-hidden border border-white/10 bg-white/[0.02]">
-            <div className="grid md:grid-cols-3 items-center">
-              <div className="md:col-span-1 h-[300px] grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="group rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/[0.02]">
+            <div className="grid md:grid-cols-3">
+              <div className="md:col-span-1 h-[220px] md:h-full">
                 <img src="/rfa.jpg" className="w-full h-full object-cover" alt="Volunteer" />
               </div>
-              <div className="md:col-span-2 p-10">
-                <p className="text-gray-300 text-lg leading-relaxed font-light italic">
-                  I have volunteered <span className="text-white font-bold">over 70 hours</span> at large public events, supporting crowd coordination and safety management. Events include international concerts and festivals such as <span className="text-white">Jennifer Lopez, Backstreet Boys, Comic Con, and Dimash Qudaibergen</span>. 
-                  <br/><br/>
-                  Through this experience, I developed strong teamwork, responsibility, and decision-making skills in fast-paced, high-pressure environments.
+              <div className="md:col-span-2 p-6 md:p-10">
+                <p className="text-gray-300 text-base md:text-lg italic font-light leading-relaxed">
+                  Over <span className="text-white font-bold underline decoration-red-500/30 underline-offset-4">70 hours</span> at public events like <span className="text-white">Jennifer Lopez, Comic Con, Dimash Qudaibergen, and more</span>. Developed teamwork and decision-making skills.
                 </p>
               </div>
             </div>
           </div>
         </section>
-
-        {/* 5. SPORTS - ОТДЕЛЬНАЯ ЦЕЛАЯ СТРОКА */}
-        <section className="mb-32 border-t border-white/10 pt-16">
-          <div className="flex items-center gap-4 mb-10 text-orange-500">
-            <Activity size={32} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter">5. Sports</h2>
-          </div>
-          <div className="p-10 rounded-[3rem] bg-orange-500/5 border border-orange-500/20">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-              <div>
-                <h4 className="text-3xl font-black italic uppercase text-white mb-2">Varsity Volleyball Team</h4>
-                <p className="text-orange-500 font-bold tracking-[0.2em] uppercase text-sm">Position: Middle Blocker | Since Grade 8</p>
-              </div>
-              <div className="max-w-xl">
-                <p className="text-gray-400 text-lg font-light italic leading-relaxed">
-                  I have been a member of the school varsity volleyball team since Grade 8. This experience reflects long-term commitment, discipline, teamwork, and competitive performance in interschool competitions.
-                </p>
-              </div>
+        {/* 5. SPORTS & LEADERSHIP */}
+        <section className="mb-24 border-t border-white/10 pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="p-8 rounded-[2.5rem] bg-orange-500/5 border border-orange-500/10">
+              <Activity className="text-orange-500 mb-4" size={28} />
+              <h4 className="text-xl font-bold uppercase italic text-white mb-2 underline decoration-orange-500/20 underline-offset-8">Varsity Volleyball</h4>
+              <p className="text-orange-500 text-[10px] font-bold uppercase tracking-widest mb-4">Middle Blocker | Grade 8+</p>
+              <p className="text-gray-400 italic text-sm leading-relaxed font-light">Long-term commitment, discipline, and competitive performance in interschool competitions.</p>
+            </div>
+            <div className="p-8 rounded-[2.5rem] bg-yellow-500/5 border border-yellow-500/10">
+              <Lightbulb className="text-yellow-400 mb-4" size={28} />
+              <h4 className="text-xl font-bold uppercase italic text-white mb-2 underline decoration-yellow-500/20 underline-offset-8">Leadership</h4>
+              <p className="text-yellow-400 text-[10px] font-bold uppercase tracking-widest mb-4">Event Coordinator</p>
+              <p className="text-gray-400 italic text-sm leading-relaxed font-light">Coordinated school events at Zhas & Healthy Club and EcoClub. Logistics and planning.</p>
             </div>
           </div>
         </section>
 
-        {/* 6. SCHOOL CLUBS & LEADERSHIP - ОТДЕЛЬНАЯ ЦЕЛАЯ СТРОКА */}
-        <section className="mb-32 border-t border-white/10 pt-16">
-          <div className="flex items-center gap-4 mb-10 text-yellow-400">
-            <Lightbulb size={32} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter">6. School Clubs & Leadership</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-10 bg-zinc-900/50 rounded-[2.5rem] border border-white/5">
-              <h4 className="text-white font-bold text-xl mb-4">Zhas & Healthy Club</h4>
-              <p className="text-yellow-400 text-xs font-bold uppercase tracking-widest mb-4">Event Coordinator</p>
-              <p className="text-gray-400 italic font-light leading-relaxed">
-                Organized and coordinated school events, managing planning, logistics, and team collaboration.
-              </p>
-            </div>
-            <div className="p-10 bg-zinc-900/50 rounded-[2.5rem] border border-white/5">
-              <h4 className="text-white font-bold text-xl mb-4">EcoClub</h4>
-              <p className="text-yellow-400 text-xs font-bold uppercase tracking-widest mb-4">Event Organizer</p>
-              <p className="text-gray-400 italic font-light leading-relaxed">
-                Planned and implemented environmental initiatives and school-wide activities.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* 7. PROJECTS - КАЖДЫЙ ПРОЕКТ НА ВСЮ ШИРИНУ */}
+{/* 7. PROJECTS — ПОЛНЫЙ ТЕКСТ */}
         <section className="mb-32 border-t border-white/10 pt-16">
           <div className="flex items-center gap-4 mb-12 text-emerald-400">
             <Send size={32} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter">7. Projects</h2>
+            <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">7. Projects</h2>
           </div>
           
           <div className="space-y-12">
-            {/* UpSAT! */}
-<div className="group grid md:grid-cols-2 gap-10 items-center p-8 bg-blue-600/10 border border-blue-500/20 rounded-[3rem] hover:bg-blue-600/15 transition-all">
-              <div className="h-[300px] rounded-[2rem] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+            
+            {/* UpSAT! — ВЕСЬ ТЕКСТ ТУТ */}
+            <div className="group grid md:grid-cols-2 gap-10 items-center p-6 md:p-10 bg-blue-600/10 border border-blue-500/20 rounded-[3rem] hover:bg-blue-600/15 transition-all">
+              <div className="h-[250px] md:h-[350px] rounded-[2rem] overflow-hidden">
                 <img src="/telega.jpg" className="w-full h-full object-cover" alt="UpSAT!" />
               </div>
               <div>
-                <h4 className="text-3xl font-black italic uppercase text-blue-400 mb-4 tracking-tighter">UpSAT! — Telegram Bot</h4>
-                <p className="text-gray-300 text-lg font-light leading-relaxed italic mb-6">An independent educational project designed to support SAT preparation.</p>
-                <ul className="text-gray-500 space-y-2 text-sm italic mb-8">
-                  <li>• Developed the program code and core materials independently</li>
-                  <li>• Early-stage project currently attracting 10+ new users daily</li>
-                </ul>
-                <a 
-                  href="https://t.me/UpSAT_bot" 
-                  target="_blank" 
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-full font-bold uppercase text-xs tracking-widest hover:bg-blue-400 transition-all shadow-lg shadow-blue-500/20"
-                >
-                  <Send size={16} /> Launch Bot
-                </a>
+                <h4 className="text-3xl font-black italic uppercase text-blue-400 mb-6 tracking-tighter">UpSAT! — Telegram Bot</h4>
+                <div className="space-y-4 text-gray-300 text-lg font-light leading-relaxed italic">
+                  <p>An independent educational project designed to support SAT preparation.</p>
+                  <p className="text-white font-medium">• Developed the program code and core materials independently.</p>
+                  <p className="text-blue-300/80">• Early-stage project currently attracting 10+ new users daily.</p>
+                </div>
+                <div className="mt-8">
+                  <a 
+                    href="https://t.me/UpSAT_bot" 
+                    target="_blank" 
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-blue-500 text-white rounded-full font-bold uppercase text-[10px] tracking-widest hover:bg-blue-400 transition-all shadow-lg shadow-blue-500/20"
+                  >
+                    <Send size={16} /> Launch Bot
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* UstaGuitar */}
-          <div className="group grid md:grid-cols-2 gap-10 items-center p-8 bg-red-600/10 border border-red-500/20 rounded-[3rem] hover:bg-red-600/15 transition-all">
-              <div className="md:order-2 h-[300px] rounded-[2rem] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+            {/* UstaGuitar — ВЕСЬ ТЕКСТ ТУТ */}
+            <div className="group grid md:grid-cols-2 gap-10 items-center p-6 md:p-10 bg-red-600/10 border border-red-500/20 rounded-[3rem] hover:bg-red-600/15 transition-all">
+              <div className="md:order-2 h-[250px] md:h-[350px] rounded-[2rem] overflow-hidden">
                 <img src="/guitar.jpg" className="w-full h-full object-cover" alt="UstaGuitar" />
               </div>
-              <div className="md:order-1 text-right md:text-left">
-                <h4 className="text-3xl font-black italic uppercase text-red-500 mb-4 tracking-tighter">UstaGuitar — YouTube</h4>
-                <p className="text-gray-300 text-lg font-light leading-relaxed italic mb-6">Personal educational channel created after two years of self-teaching guitar.</p>
-                <ul className="text-gray-500 space-y-2 text-sm italic mb-8">
-                  <li>• Teach popular songs through clear, beginner-friendly tutorials</li>
-                  <li>• Focus on accessibility and practical learning</li>
-                </ul>
-                <a 
-                  href="https://www.youtube.com/channel/UCiuNzkTnPTLwm_c61IE0lsw" 
-                  target="_blank" 
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-full font-bold uppercase text-xs tracking-widest hover:bg-red-500 transition-all shadow-lg shadow-red-600/20"
-                >
-                  <Youtube size={16} /> Watch Tutorials
-                </a>
+              <div className="md:order-1">
+                <h4 className="text-3xl font-black italic uppercase text-red-500 mb-6 tracking-tighter">UstaGuitar — YouTube</h4>
+                <div className="space-y-4 text-gray-300 text-lg font-light leading-relaxed italic">
+                  <p>Personal educational channel created after two years of self-teaching guitar.</p>
+                  <p className="text-white font-medium">• Teach popular songs through clear, beginner-friendly tutorials.</p>
+                  <p className="text-red-300/80">• Focus on accessibility and practical learning for everyone.</p>
+                </div>
+                <div className="mt-8">
+                  <a 
+                    href="https://www.youtube.com/channel/UCiuNzkTnPTLwm_c61IE0lsw" 
+                    target="_blank" 
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 text-white rounded-full font-bold uppercase text-[10px] tracking-widest hover:bg-red-500 transition-all shadow-lg shadow-red-600/20"
+                  >
+                    <Youtube size={16} /> Watch Tutorials
+                  </a>
+                </div>
               </div>
             </div>
 
-            {/* Easynomics */}
-            <div className="p-10 bg-emerald-950/10 border border-emerald-500/20 rounded-[3rem]">
-              <h4 className="text-3xl font-black italic uppercase text-emerald-400 mb-4 tracking-tighter">Easynomics — Non-Profit Initiative</h4>
-              <p className="text-gray-300 text-lg font-light leading-relaxed italic mb-6">A project aimed at increasing access to economics education in the Kazakh language.</p>
-              <ul className="text-gray-500 space-y-2 text-sm italic">
-                <li>• Founded and assembled a team of five contributors</li>
-                <li>• Currently developing introductory economics books to address the lack of local resources</li>
-              </ul>
+            {/* Easynomics — ВЕСЬ ТЕКСТ ТУТ */}
+            <div className="p-8 md:p-12 bg-emerald-950/20 border border-emerald-500/30 rounded-[3rem] hover:bg-emerald-900/20 transition-all">
+              <h4 className="text-3xl font-black italic uppercase text-emerald-400 mb-6 tracking-tighter">Easynomics — Non-Profit Initiative</h4>
+              <div className="space-y-6">
+                <p className="text-gray-200 text-xl font-light leading-relaxed italic">
+                  A project aimed at increasing access to economics education in the <span className="text-white font-bold underline decoration-emerald-500/50 underline-offset-4">Kazakh language</span>.
+                </p>
+                <div className="grid md:grid-cols-2 gap-6 text-gray-400 italic text-lg border-t border-emerald-500/10 pt-6">
+                  <p>• Founded and assembled a team of <span className="text-white">five contributors</span> to work on the project.</p>
+                  <p>• Currently developing introductory economics books to address the lack of <span className="text-white">local resources</span> in Kazakhstan.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* FOOTER - КОНТАКТЫ */}
-        <footer className="border-t border-white/10 pt-16 flex flex-col md:flex-row justify-between items-start gap-12">
-          <div className="space-y-6">
-            <h3 className="text-6xl font-black italic uppercase tracking-tighter">Connect</h3>
+        {/* FOOTER */}
+        <footer className="border-t border-white/10 pt-16 flex flex-col md:flex-row justify-between gap-12 text-center md:text-left">
+          <div>
+            <h3 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-4">Connect</h3>
             <a href="https://kz.linkedin.com/in/dariya-murzakhmetova-a6b645382" target="_blank" className="inline-flex items-center gap-3 text-blue-400 hover:text-white transition-all text-sm font-bold uppercase tracking-widest">
               <Linkedin size={24} /> LinkedIn Profile
             </a>
           </div>
-          <div className="space-y-6 text-2xl md:text-3xl font-light italic">
-            <div className="flex items-center gap-4">
-              <Phone className="text-gray-600" size={24} /> <span className="hover:text-blue-400 transition-colors cursor-pointer">+7 776 330 10 05</span>
+          <div className="space-y-4 md:space-y-6 text-xl md:text-2xl font-light italic">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <Phone className="text-gray-600 hidden md:block" size={24} /> <span>+7 776 330 10 05</span>
             </div>
-            <div className="flex items-center gap-4">
-              <Mail className="text-gray-600" size={24} /> <span className="hover:text-blue-400 transition-colors cursor-pointer break-all">murzakhmetovadariya21@gmail.com</span>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <Mail className="text-gray-600 hidden md:block" size={24} /> <span className="break-all text-sm md:text-xl">murzakhmetovadariya21@gmail.com</span>
             </div>
           </div>
         </footer>
-
       </main>
     </div>
   );
 }
-       
