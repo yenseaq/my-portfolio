@@ -296,7 +296,7 @@ export default function Home() {
           </div>
           <div className="space-y-4 md:space-y-6 text-xl md:text-2xl font-light italic">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-              <Phone className="text-gray-600 hidden md:block" size={24} /> <span>+7 776 330 10 05</span>
+              <Phone className="text-gray-600 hidden md:block" size={24} /> <span>+7 701 210 00 45</span>
             </div>
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
               <Mail className="text-gray-600 hidden md:block" size={24} /> <span className="break-all text-sm md:text-xl">murzakhmetovadariya21@gmail.com</span>
