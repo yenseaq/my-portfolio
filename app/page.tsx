@@ -151,14 +151,6 @@ export default function Home() {
               </div>
             </div>
 
-    
-       {/* Карточка 2 */}
-       <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-2xl">
-         <div className="absolute top-0 left-0 w-1.5 h-full bg-yellow-500" />
-         <div className="relative z-10 text-gray-300">
-           Major Economics Olympiad (2025): <span className="text-white font-bold not-italic ml-2">Finalist</span>
-         </div>
-       </div>
 
     </div> {/* Конец грида */}
             <div className="max-w-4xl">
