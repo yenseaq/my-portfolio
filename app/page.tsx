@@ -168,7 +168,6 @@ export default function Home() {
                   </ul>
                </div>
             </div>
-          </div>
         </section>
 
         {/* 4. VOLUNTEER EXPERIENCE — ПОЛНЫЙ ТЕКСТ ТУТ */}
