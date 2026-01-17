@@ -132,7 +132,7 @@ export default function Home() {
 
           <div className="space-y-12">
             {/* ГРИД: md:grid-cols-2 ставит их ВМЕСТЕ в один ряд на компах */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl italic font-light">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl italic font-light mb-12">
               
               {/* Карточка 1 */}
               <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-2xl">
