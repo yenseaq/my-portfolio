@@ -81,11 +81,11 @@ export default function Home() {
               <div className="space-y-4">
                 <div>
                   <span className="text-blue-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Higher Level (HL):</span>
-                  <p className="text-gray-200 font-medium text-sm md:text-base">Economics, Geography, English B</p>
+                  <p className="text-gray-200 font-bold text-sm md:text-base">Economics, Geography, English B</p>
                 </div>
                 <div>
                   <span className="text-blue-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Standard Level (SL):</span>
-                  <p className="text-gray-400 text-sm md:text-base italic">Russian Language & Literature, Math AA, Biology</p>
+                  <p className="text-gray-400 font-bold text-sm md:text-base">Russian Language & Literature, Math AA, Biology</p>
                 </div>
               </div>
             </div>
@@ -129,15 +129,19 @@ export default function Home() {
             <Trophy size={28} />
             <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">3. Economics Achievements</h2>
           </div>
-          <div className="space-y-12">
-            <div className="grid md:grid-cols-2 gap-6 text-xl italic font-light">
-               <div className="p-6 border-l-2 border-yellow-500/30 bg-white/5 text-gray-300">
-                 Asian Economics Olympiad (2025): <span className="text-white font-bold">9th place</span>
-               </div>
-               <div className="p-6 border-l-2 border-yellow-500/30 bg-white/5 text-white font-bold">
-                 Major Economics Olympiad (2025): Finalist
-               </div>
-            </div>
+   <div className="space-y-12">
+    <div className="grid md:grid-cols-2 gap-6 text-xl italic font-light">
+       {/* Первое достижение */}
+       <div className="p-8 border-l-4 border-yellow-500/50 bg-white/5 backdrop-blur-md rounded-r-2xl border border-white/5 text-gray-300">
+         Asian Economics Olympiad (2025): <span className="text-white font-bold not-italic">9th place</span>
+       </div>
+       
+       {/* Второе достижение */}
+       <div className="p-8 border-l-4 border-yellow-500/50 bg-white/5 backdrop-blur-md rounded-r-2xl border border-white/5 text-gray-300">
+         Major Economics Olympiad (2025): <span className="text-white font-bold not-italic">Finalist</span>
+       </div>
+    </div>
+</div>
             
             <div className="max-w-4xl">
                <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic border-b border-white/5 pb-10">
