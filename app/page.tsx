@@ -200,7 +200,7 @@ export default function Home() {
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-light italic">
                   I have volunteered <span className="text-white font-bold underline decoration-red-500/30 underline-offset-4">over 70 hours</span> at large public events, supporting crowd coordination and safety management. 
                   <br /><br />
-                  Events include international concerts and festivals such as <span className="text-white font-bold">Jennifer Lopez, Backstreet Boys, Comic Con, and Dimash Qudaibergen</span>. 
+                  Events include international concerts and festivals such as <span className="text-white font-bold">Jennifer Lopez, Backstreet Boys, Comic Con, and more</span>. 
                   <br /><br />
                   Through this experience, I developed strong teamwork, responsibility, and decision-making skills in fast-paced, high-pressure environments.
                 </p>
