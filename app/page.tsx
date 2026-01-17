@@ -124,38 +124,48 @@ export default function Home() {
           </div>
         </section>
      {/* 3. ECONOMICS ACHIEVEMENTS + QAZ ECONOMICS */}
-        <section className="mb-32">
+<section className="mb-32">
           <div className="flex items-center gap-4 mb-8 text-yellow-500 border-b border-white/10 pb-4">
             <Trophy size={28} />
             <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">3. Economics Achievements</h2>
           </div>
- <div className="space-y-12">
-    <div className="grid md:grid-cols-2 gap-6 text-xl italic font-light">
-       {/* Карточка 1 */}
-       <div className="relative group p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all hover:border-yellow-500/50 hover:bg-white/10 overflow-hidden">
-         {/* Тонкий светящийся градиент по краю (опционально) */}
-         <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500" />
-         
-         <div className="relative z-10 text-gray-300">
-           Asian Economics Olympiad (2025): <span className="text-white font-bold not-italic ml-2">9th place</span>
-         </div>
-       </div>
-  </div>
-       
+
+          <div className="space-y-12">
+            {/* ГРИД: md:grid-cols-2 ставит их ВМЕСТЕ в один ряд на компах */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xl italic font-light">
+              
+              {/* Карточка 1 */}
+              <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-2xl">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-yellow-500" />
+                <div className="relative z-10 text-gray-300">
+                  Asian Economics Olympiad (2025): <span className="text-white font-bold not-italic ml-2">9th place</span>
+                </div>
+              </div>
+              
+              {/* Карточка 2 */}
+              <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-2xl">
+                <div className="absolute top-0 left-0 w-1.5 h-full bg-yellow-500" />
+                <div className="relative z-10 text-gray-300">
+                  Major Economics Olympiad (2025): <span className="text-white font-bold not-italic ml-2">Finalist</span>
+                </div>
+              </div>
+            </div>
+
+    
        {/* Карточка 2 */}
-       <div className="relative group p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all hover:border-yellow-500/50 hover:bg-white/10 overflow-hidden">
-         <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500" />
-         
+       <div className="relative p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden shadow-2xl">
+         <div className="absolute top-0 left-0 w-1.5 h-full bg-yellow-500" />
          <div className="relative z-10 text-gray-300">
            Major Economics Olympiad (2025): <span className="text-white font-bold not-italic ml-2">Finalist</span>
          </div>
        </div>
-    </div>
-            
+
+    </div> {/* Конец грида */}
             <div className="max-w-4xl">
                <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic border-b border-white/5 pb-10">
                  Co-Author of an independent research paper on <span className="text-white font-bold">Market-Led Growth and the Development Assistance</span>, analyzing development strategies and the effectiveness of economic policy.
                </p>
+
 
                {/* QAZ ECONOMICS — ПОЛНЫЙ ТЕКСТ ТУТ */}
                <div className="mt-12 p-8 md:p-10 bg-blue-500/5 rounded-[2.5rem] border border-blue-500/20">
