@@ -85,7 +85,7 @@ export default function Home() {
                 </div>
                 <div>
                   <span className="text-blue-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Standard Level (SL):</span>
-                  <p className="text-gray-400 font-bold text-sm md:text-base">Russian Language & Literature, Math AA, Biology</p>
+                  <p className="text-gray-200 font-bold text-sm md:text-base">Russian Language & Literature, Math AA, Biology</p>
                 </div>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function Home() {
           <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/[0.02]">
             <div className="grid md:grid-cols-3">
               <div className="md:col-span-2 p-6 md:p-10 order-2 md:order-1">
-                <p className="text-purple-400 font-bold text-lg mb-3 italic">2019 – 2024</p>
+                <p className="text-purple-400 font-bold text-lg mb-3 italic">September 2019 – June 2024</p>
                 <p className="text-gray-300 text-base md:text-lg leading-relaxed italic font-light">
                   Completed specialized music education (Dombyra). Performed as a <span className="text-white font-bold italic">Principal Musician</span> in the orchestra, showcasing Kazakh cultural heritage.
                 </p>
@@ -129,19 +129,28 @@ export default function Home() {
             <Trophy size={28} />
             <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">3. Economics Achievements</h2>
           </div>
-   <div className="space-y-12">
+ <div className="space-y-12">
     <div className="grid md:grid-cols-2 gap-6 text-xl italic font-light">
-       {/* Первое достижение */}
-       <div className="p-8 border-l-4 border-yellow-500/50 bg-white/5 backdrop-blur-md rounded-r-2xl border border-white/5 text-gray-300">
-         Asian Economics Olympiad (2025): <span className="text-white font-bold not-italic">9th place</span>
+       {/* Карточка 1 */}
+       <div className="relative group p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all hover:border-yellow-500/50 hover:bg-white/10 overflow-hidden">
+         {/* Тонкий светящийся градиент по краю (опционально) */}
+         <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500" />
+         
+         <div className="relative z-10 text-gray-300">
+           Asian Economics Olympiad (2025): <span className="text-white font-bold not-italic ml-2">9th place</span>
+         </div>
        </div>
+  </div>
        
-       {/* Второе достижение */}
-       <div className="p-8 border-l-4 border-yellow-500/50 bg-white/5 backdrop-blur-md rounded-r-2xl border border-white/5 text-gray-300">
-         Major Economics Olympiad (2025): <span className="text-white font-bold not-italic">Finalist</span>
+       {/* Карточка 2 */}
+       <div className="relative group p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl transition-all hover:border-yellow-500/50 hover:bg-white/10 overflow-hidden">
+         <div className="absolute top-0 left-0 w-1 h-full bg-yellow-500" />
+         
+         <div className="relative z-10 text-gray-300">
+           Major Economics Olympiad (2025): <span className="text-white font-bold not-italic ml-2">Finalist</span>
+         </div>
        </div>
     </div>
-</div>
             
             <div className="max-w-4xl">
                <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic border-b border-white/5 pb-10">
