@@ -56,7 +56,7 @@ export default function Home() {
             </h1>
             <p className="text-lg md:text-xl text-blue-400 font-bold italic mb-4">Junior Student at NIS Astana</p>
             <p className="text-gray-300 text-base md:text-lg font-light leading-relaxed max-w-xl italic mx-auto md:mx-0">
-              IBDP Candidate. Highly motivated student with strong academic performance and a deep interest in economics and creative projects.
+              IB DP Candidate. Highly motivated student with strong academic performance and a deep interest in studying the world.
             </p>
           </div>
 
@@ -73,11 +73,11 @@ export default function Home() {
         <section className="mb-24">
           <div className="flex items-center gap-4 mb-8 text-blue-400 border-b border-white/10 pb-4">
             <GraduationCap size={28} />
-            <h2 className="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter">1. Academics</h2>
+            <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">1. Academics</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white/[0.03] p-6 md:p-8 rounded-3xl border border-white/5">
-              <p className="text-gray-300 mb-4 text-sm md:text-base italic">I am an IBDP student approved for the following subjects:</p>
+              <p className="text-gray-300 mb-4 text-sm md:text-base italic">I am an IB DP student approved for the following subjects:</p>
               <div className="space-y-4">
                 <div>
                   <span className="text-blue-400 text-[10px] font-bold uppercase tracking-widest block mb-1">Higher Level (HL):</span>
@@ -92,29 +92,79 @@ export default function Home() {
             <div className="flex flex-col justify-center gap-6 bg-blue-500/5 p-6 md:p-8 rounded-3xl border border-blue-500/20 text-center md:text-left">
               <div>
                 <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">GPA</p>
-                <p className="text-3xl md:text-4xl font-black italic text-white">4.96 / 5.00</p>
+                <p className="text-3xl md:text-4xl font-black text-white">4.96 / 5.00</p>
               </div>
               <div>
                 <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">SAT Score</p>
-                <p className="text-3xl md:text-4xl font-black text-blue-500 italic">1560</p>
+                <p className="text-3xl md:text-4xl font-black text-blue-500">1560</p>
                 <p className="text-blue-400 text-xs font-medium italic">(EBRW 770 | Math 790)</p>
               </div>
             </div>
           </div>
         </section>
 
+{/* НОВАЯ РАЗДЕЛЯЮЩАЯ ЛИНИЯ ПОСЛЕ ACADEMICS */}
+        <div className="flex justify-center my-16 w-full">
+          <div className="w-1/2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+        </div>
+
+        {/* ТВОЙ ВЫТЯНУТЫЙ БЛОК BACKGROUND */}
+        <div className="flex flex-col items-center justify-center w-full mb-32">
+          
+          <div className="w-full max-w-5xl relative p-10 md:p-12 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-green-500" />
+            <h3 className="text-2xl font-bold text-green-500 mb-8 uppercase tracking-[0.3em]">Background & Aspirations</h3>
+            
+            <div className="text-gray-300 space-y-6 italic font-light leading-relaxed text-lg md:text-xl">
+              <p>
+                A Kazakh female student born in 2008 into a middle-income family. Fluent in <span className="text-white font-semibold">Kazakh, Russian, and English</span>.
+              </p>
+              <p>
+                Passionate about Music, Sports, and Academics, with an intention to Major in <span className="text-white font-semibold">Finance & Global Economics</span>.
+              </p>
+              <p>
+                I aspire to address global challenges, particularly improving living standards and humanitarian care in my region.
+              </p>
+            </div>
+          </div>
+
+          {/* ЛИНИЯ И ОТСТУП ПЕРЕД ЦИТАТОЙ */}
+          <div className="flex justify-center my-24 w-full">
+            <div className="w-1/3 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+          </div>
+
+{/* 2. БЛОК: ЦИТАТА (ПОЛНАЯ РОЗОВАЯ РАМКА) */}
+<div className="w-full max-w-3xl flex flex-col items-center mx-auto my-32">
+  
+  {/* Ячейка цитаты с полной обводкой */}
+  <div className="relative w-full p-12 rounded-3xl border-2 border-pink-400/50 bg-white/[0.03] backdrop-blur-2xl shadow-[0_0_40px_rgba(244,114,182,0.15)] mb-8 transition-all hover:border-pink-300">
+    
+    {/* Текст цитали */}
+    <p className="text-2xl md:text-4xl font-light italic text-pink-50 leading-tight text-center tracking-tight">
+      "Don't spend time beating on a wall hoping to transform it into a door."
+    </p>
+  </div>
+
+            
+            {/* АВТОР ВНЕ КОРОБКИ (Розовато-белый) */}
+            <p className="text-pink-100/60 font-bold tracking-[0.5em] uppercase text-sm md:text-base">
+              — Coco Chanel
+            </p>
+          </div>
+         </div>
+
         {/* 2. MUSIC */}
         <section className="mb-24 border-t border-white/10 pt-16">
           <div className="flex items-center gap-4 mb-8 text-purple-400">
             <Music size={28} />
-            <h2 className="text-2xl md:text-3xl font-bold uppercase italic tracking-tighter text-white">2. School of Arts №2</h2>
+            <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter text-white">2. School of Arts №2</h2>
           </div>
           <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/[0.02]">
             <div className="grid md:grid-cols-3">
               <div className="md:col-span-2 p-6 md:p-10 order-2 md:order-1">
-                <p className="text-purple-400 font-bold text-lg mb-3 italic">September 2019 – June 2024</p>
+                <p className="text-purple-400 font-bold text-lg mb-3">September 2019 – June 2024</p>
                 <p className="text-gray-300 text-base md:text-lg leading-relaxed italic font-light">
-                  Completed specialized music education (Dombyra). Performed as a <span className="text-white font-bold italic">Principal Musician</span> in the orchestra, showcasing Kazakh cultural heritage.
+                 Completed specialized music education in Folk Instruments <span className="text-white font-bold italic"> (Dombyra)</span>. Performed as a <span className="text-white font-bold italiс"> Principal Musician </span> in the orchestra, showcasing Kazakh cultural heritage.
                 </p>
               </div>
               <div className="md:col-span-1 h-[250px] md:h-full order-1 md:order-2">
@@ -127,7 +177,7 @@ export default function Home() {
 <section className="mb-32">
           <div className="flex items-center gap-4 mb-8 text-yellow-500 border-b border-white/10 pb-4">
             <Trophy size={28} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">3. Economics Achievements</h2>
+            <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">3. Economics Achievements</h2>
           </div>
 
           <div className="space-y-12">
@@ -185,7 +235,7 @@ export default function Home() {
         <section className="mb-32 border-t border-white/10 pt-16">
           <div className="flex items-center gap-4 mb-10 text-red-500">
             <Heart size={32} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">4. Volunteer Experience</h2>
+            <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">4. Volunteer Experience</h2>
           </div>
           <div className="relative rounded-[3rem] overflow-hidden border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] transition-all">
             <div className="grid md:grid-cols-3 items-center">
@@ -198,7 +248,7 @@ export default function Home() {
               </div>
               <div className="md:col-span-2 p-8 md:p-14">
                 <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-light italic">
-                  I have volunteered <span className="text-white font-bold underline decoration-red-500/30 underline-offset-4">over 70 hours</span> at large public events, supporting crowd coordination and safety management. 
+                  I have volunteered <span className="text-white font-bold underline decoration-red-500/30 underline-offset-4">over 120 hours</span> at large public events, supporting crowd coordination and safety management. 
                   <br /><br />
                   Events include international concerts and festivals such as <span className="text-white font-bold">Jennifer Lopez, Backstreet Boys, Comic Con, and more</span>. 
                   <br /><br />
@@ -215,7 +265,7 @@ export default function Home() {
             <div className="p-8 rounded-[2.5rem] bg-orange-500/5 border border-orange-500/10">
               <Activity className="text-orange-500 mb-4" size={28} />
               <h4 className="text-xl font-bold uppercase italic text-white mb-2 underline decoration-orange-500/20 underline-offset-8">Varsity Volleyball</h4>
-              <p className="text-orange-500 text-[10px] font-bold uppercase tracking-widest mb-4">Middle Blocker | Grade 8+</p>
+              <p className="text-orange-500 text-[10px] font-bold uppercase tracking-widest mb-4">Middle Blocker | From Grade 8 (2022)</p>
               <p className="text-gray-400 italic text-sm leading-relaxed font-light">Long-term commitment, discipline, and competitive performance in interschool competitions.</p>
             </div>
             <div className="p-8 rounded-[2.5rem] bg-yellow-500/5 border border-yellow-500/10">
@@ -231,7 +281,7 @@ export default function Home() {
         <section className="mb-32 border-t border-white/10 pt-16">
           <div className="flex items-center gap-4 mb-12 text-emerald-400">
             <Send size={32} />
-            <h2 className="text-3xl font-bold uppercase italic tracking-tighter text-white">7. Projects</h2>
+            <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">7. Projects</h2>
           </div>
           
           <div className="space-y-12">
@@ -242,7 +292,7 @@ export default function Home() {
                 <img src="/telega.jpg" className="w-full h-full object-cover" alt="UpSAT!" />
               </div>
               <div>
-                <h4 className="text-3xl font-black italic uppercase text-blue-400 mb-6 tracking-tighter">UpSAT! — Telegram Bot</h4>
+                <h4 className="text-3xl font-black uppercase text-blue-400 mb-6 tracking-tighter">UpSAT! — Telegram Bot</h4>
                 <div className="space-y-4 text-gray-300 text-lg font-light leading-relaxed italic">
                   <p>An independent educational project designed to support SAT preparation.</p>
                   <p className="text-white font-medium">• Developed the program code and core materials independently.</p>
@@ -266,7 +316,7 @@ export default function Home() {
                 <img src="/guitar.jpg" className="w-full h-full object-cover" alt="UstaGuitar" />
               </div>
               <div className="md:order-1">
-                <h4 className="text-3xl font-black italic uppercase text-red-500 mb-6 tracking-tighter">UstaGuitar — YouTube</h4>
+                <h4 className="text-3xl font-black uppercase text-red-500 mb-6 tracking-tighter">UstaGuitar — YouTube</h4>
                 <div className="space-y-4 text-gray-300 text-lg font-light leading-relaxed italic">
                   <p>Personal educational channel created after two years of self-teaching guitar.</p>
                   <p className="text-white font-medium">• Teach popular songs through clear, beginner-friendly tutorials.</p>
@@ -286,7 +336,7 @@ export default function Home() {
 
             {/* Easynomics — ВЕСЬ ТЕКСТ ТУТ */}
             <div className="p-8 md:p-12 bg-emerald-950/20 border border-emerald-500/30 rounded-[3rem] hover:bg-emerald-900/20 transition-all">
-              <h4 className="text-3xl font-black italic uppercase text-emerald-400 mb-6 tracking-tighter">Easynomics — Non-Profit Initiative</h4>
+              <h4 className="text-3xl font-black uppercase text-emerald-400 mb-6 tracking-tighter">Easynomics — Non-Profit Initiative</h4>
               <div className="space-y-6">
                 <p className="text-gray-200 text-xl font-light leading-relaxed italic">
                   A project aimed at increasing access to economics education in the <span className="text-white font-bold underline decoration-emerald-500/50 underline-offset-4">Kazakh language</span>.
@@ -317,7 +367,7 @@ export default function Home() {
             </div>
           </div>
         </footer>
-      </main>
+    </main>
     </div>
   );
 }
