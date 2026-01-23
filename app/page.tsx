@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import { 
   Linkedin, Trophy, Music, Heart, Send, Youtube, 
-  Star, BookOpen, Activity, GraduationCap, Users, Lightbulb, Phone, Mail 
+  Star, BookOpen, Activity, GraduationCap, Users, Lightbulb, Phone, Mail, Target
 } from "lucide-react";
 
 export default function Home() {
@@ -69,6 +69,44 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+{/* MUSIC SECTION WITH LINES */}
+<div className="max-w-6xl mx-auto px-4 my-16">
+  {/* Верхняя линия */}
+  <div className="border-t border-white/10 mb-8"></div>
+
+  <div className="flex flex-col md:flex-row items-center gap-8">
+    {/* Текст слева */}
+    <div className="flex items-center gap-3 min-w-[200px]">
+      <div className="p-2 bg-white/5 rounded-lg">
+        <Music size={20} className="text-red-700" />
+      </div>
+      <span className="text-sm font-medium tracking-widest uppercase text-gray-400">
+        Let's start <br /> with a song
+      </span>
+    </div>
+
+    {/* Сам виджет (тонкий и на всю оставшуюся длину) */}
+    <div className="flex-1 w-full">
+      <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/5 bg-[#121212]">
+        <iframe
+          style={{ borderRadius: '12px' }}
+          src="https://open.spotify.com/embed/track/3KkXRkHbMCARz0aVfEt68P?utm_source=generator&theme=0" 
+          width="100%"
+          height="80"
+          frameBorder="0"
+          allowFullScreen={true}
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  {/* Нижняя линия */}
+  <div className="border-t border-white/10 mt-8"></div>
+</div>
+
         {/* 1. ACADEMICS */}
         <section className="mb-24">
           <div className="flex items-center gap-4 mb-8 text-blue-400 border-b border-white/10 pb-4">
@@ -349,6 +387,62 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+    {/* 5. FUN FACTS: PHOTO - TEXT - PHOTO */}
+<section className="max-w-6xl mx-auto px-6 mb-24">
+  <div className="flex items-center gap-4 mb-8 text-pink-400 border-b border-white/10 pb-4">
+    <Target size={28} />
+    <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">Lastly... Fun Facts</h2>
+  </div>
+  
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+    
+    {/* Левая фотка */}
+    <div className="relative aspect-[9/16] overflow-hidden rounded-[2rem] border-4 border-white/5 shadow-xl">
+      <img 
+        src="/prime2.jpg" 
+        alt="Photo 1"
+        className="object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity"
+      />
+    </div>
+
+    {/* Центральный блок с текстом */}
+    <div className="bg-white/[0.03] p-6 rounded-3xl border border-white/5 shadow-2xl">
+      <ul className="space-y-4 text-gray-300 text-sm md:text-base">
+        <li className="flex items-start gap-2">
+          <span className="text-pink-500">•</span>
+          <span>I can solve a <strong>12-sided</strong> cubic Rubik’s cube</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-pink-500">•</span>
+          <span>Self-taught on: <strong>guitar, piano,</strong> and <strong>domra</strong> ые(not same as dombyra)</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-pink-500">•</span>
+          <span>I love <strong>Victoria’s Secret</strong> models (2016 & 2025 runways are fire)</span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-pink-500">•</span>
+          <span>I can code in <strong>Java, Python,</strong> and <strong>SQL</strong></span>
+        </li>
+        <li className="flex items-start gap-2">
+          <span className="text-pink-500">•</span>
+          <span>I am afraid of <strong>dogs</strong></span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Правая фотка */}
+    <div className="relative aspect-[9/16] overflow-hidden rounded-[2rem] border-4 border-white/5 shadow-xl">
+      <img 
+        src="/prime.jpg" 
+        alt="Photo 2"
+        className="object-cover w-full h-full opacity-80 hover:opacity-100 transition-opacity"
+      />
+    </div>
+
+  </div>
+</section>
 
         {/* FOOTER */}
         <footer className="border-t border-white/10 pt-16 flex flex-col md:flex-row justify-between gap-12 text-center md:text-left">
