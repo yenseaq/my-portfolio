@@ -29,40 +29,40 @@ export default function Home() {
       
       {/* КУРСОР */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border-2 border-blue-500 rounded-full pointer-events-none z-[9999] hidden md:block"
+        className="fixed top-0 left-0 w-8 h-8 border-2 border-white-200 rounded-full pointer-events-none z-[9999] hidden md:block"
         style={{ x: cursorXSpring, y: cursorYSpring }}
       />
 
       {/* GLOW EFFECTS (ЯРКИЕ ПЯТНА) */}
       <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px]" />
-        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-purple-600/20 rounded-full blur-[100px]" />
-        <div className="absolute top-[60%] left-[-5%] w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[150px]" />
-        <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] bg-red-600/15 rounded-full blur-[130px]" />
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-black/20 rounded-full blur-[120px]" />
+        <div className="absolute top-[20%] right-[-10%] w-[400px] h-[400px] bg-red-600/20 rounded-full blur-[100px]" />
+        <div className="absolute top-[60%] left-[-5%] w-[600px] h-[600px] bg-black/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] bg-red-700/30 rounded-full blur-[130px]" />
       </div>
 
       <main className="max-w-6xl mx-auto px-6 md:px-12 pt-16 pb-32 relative z-10">
         {/* HERO SECTION */}
         <section className="relative mb-24 flex flex-col md:flex-row items-center justify-between gap-10 z-10">
           <div className="flex-1 order-2 md:order-1 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-xs font-medium">
               <Star size={14} /> @yenseaq
             </div>
             <h1 className="text-4xl md:text-7xl lg:text-[6vw] font-black tracking-tighter uppercase leading-[0.9] mb-6">
               Dariya <br /> 
-              <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-blue-400 bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+              <span className="bg-gradient-to-r from-red-500 via-red-600 to-red-800 bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
   Murzakhmetova
 </span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-400 font-bold italic mb-4">Junior Student at NIS Astana</p>
-            <p className="text-gray-300 text-base md:text-lg font-light leading-relaxed max-w-xl italic mx-auto md:mx-0">
+            <p className="text-lg md:text-xl text-red-400 font-bold mb-4">Junior Student at NIS Astana</p>
+            <p className="text-gray-100 text-base md:text-lg font-light leading-relaxed max-w-xl italic mx-auto md:mx-0">
               IB DP Candidate. Highly motivated student with strong academic performance and a deep interest in studying the world.
             </p>
           </div>
 
           <div className="relative flex-shrink-0 order-1 md:order-2">
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 via-purple-600 to-emerald-500 rounded-full blur-2xl opacity-30"></div>
-            <div className="relative w-[240px] h-[240px] md:w-[380px] md:h-[380px] p-1 rounded-full bg-gradient-to-tr from-blue-500 via-purple-500 to-emerald-500">
+            <div className="absolute inset-0 bg-gradient-to-tr from-red-100 via-red-600 to-red-800 rounded-full blur-2xl opacity-30"></div>
+            <div className="relative w-[240px] h-[240px] md:w-[380px] md:h-[380px] p-1 rounded-full bg-gradient-to-tr from-red-100 via-red-300 to-red-800">
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#0f1115]">
                 <img src="/amina.jpg" className="w-full h-full object-cover" alt="Dariya" />
               </div>
@@ -73,7 +73,7 @@ export default function Home() {
 {/* MUSIC SECTION WITH LINES */}
 <div className="max-w-6xl mx-auto px-4 my-16">
   {/* Верхняя линия */}
-  <div className="border-t border-white/10 mb-8"></div>
+  <div className="border-t border-red-900/30 mb-8"></div>
 
   <div className="flex flex-col md:flex-row items-center gap-8">
     {/* Текст слева */}
@@ -81,7 +81,7 @@ export default function Home() {
       <div className="p-2 bg-white/5 rounded-lg">
         <Music size={20} className="text-red-700" />
       </div>
-      <span className="text-sm font-medium tracking-widest uppercase text-gray-400">
+      <span className="text-sm font-medium tracking-widest uppercase text-gray-300">
         Let's start <br /> with a song
       </span>
     </div>
@@ -91,7 +91,7 @@ export default function Home() {
       <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/5 bg-[#121212]">
         <iframe
           style={{ borderRadius: '12px' }}
-          src="https://open.spotify.com/embed/track/3KkXRkHbMCARz0aVfEt68P?utm_source=generator&theme=0" 
+          src="https://open.spotify.com/embed/track/3KkXRkHbMCARz0aVfEt68P?utm_source=generator" 
           width="100%"
           height="80"
           frameBorder="0"
@@ -104,12 +104,12 @@ export default function Home() {
   </div>
 
   {/* Нижняя линия */}
-  <div className="border-t border-white/10 mt-8"></div>
+  <div className="border-t border-red-900/30 mt-8"></div>
 </div>
 
         {/* 1. ACADEMICS */}
         <section className="mb-24">
-          <div className="flex items-center gap-4 mb-8 text-blue-400 border-b border-white/10 pb-4">
+          <div className="flex items-center gap-4 mb-8 text-blue-400 border-b border-red-900/30 pb-4">
             <GraduationCap size={28} />
             <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">1. Academics</h2>
           </div>
@@ -143,7 +143,7 @@ export default function Home() {
 
 {/* НОВАЯ РАЗДЕЛЯЮЩАЯ ЛИНИЯ ПОСЛЕ ACADEMICS */}
         <div className="flex justify-center my-16 w-full">
-          <div className="w-1/2 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          <div className="w-1/2 h-px bg-gradient-to-r from-transparent via-red-800 to-transparent" />
         </div>
 
         {/* ТВОЙ ВЫТЯНУТЫЙ БЛОК BACKGROUND */}
@@ -168,39 +168,39 @@ export default function Home() {
 
           {/* ЛИНИЯ И ОТСТУП ПЕРЕД ЦИТАТОЙ */}
           <div className="flex justify-center my-24 w-full">
-            <div className="w-1/3 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+            <div className="w-1/3 h-px bg-gradient-to-r from-transparent via-red-800 to-transparent" />
           </div>
 
 {/* 2. БЛОК: ЦИТАТА (ПОЛНАЯ РОЗОВАЯ РАМКА) */}
 <div className="w-full max-w-3xl flex flex-col items-center mx-auto my-32">
   
   {/* Ячейка цитаты с полной обводкой */}
-  <div className="relative w-full p-12 rounded-3xl border-2 border-pink-400/50 bg-white/[0.03] backdrop-blur-2xl shadow-[0_0_40px_rgba(244,114,182,0.15)] mb-8 transition-all hover:border-pink-300">
+  <div className="relative w-full p-12 rounded-3xl border-2 border-pink-600/50 bg-white/[0.03] backdrop-blur-2xl shadow-[0_0_40px_rgba(244,114,182,0.15)] mb-8 transition-all hover:border-red-600">
     
     {/* Текст цитали */}
-    <p className="text-2xl md:text-4xl font-light italic text-pink-50 leading-tight text-center tracking-tight">
+    <p className="text-2xl md:text-4xl font-light italic text-red-50 leading-tight text-center tracking-tight">
       "Don't spend time beating on a wall hoping to transform it into a door."
     </p>
   </div>
 
             
             {/* АВТОР ВНЕ КОРОБКИ (Розовато-белый) */}
-            <p className="text-pink-100/60 font-bold tracking-[0.5em] uppercase text-sm md:text-base">
+            <p className="text-red-100/60 font-bold tracking-[0.5em] uppercase text-sm md:text-base">
               — Coco Chanel
             </p>
           </div>
          </div>
 
         {/* 2. MUSIC */}
-        <section className="mb-24 border-t border-white/10 pt-16">
-          <div className="flex items-center gap-4 mb-8 text-purple-400">
+        <section className="mb-24 border-t border-red-900/30 pt-16">
+          <div className="flex items-center gap-4 mb-8 text-red-400">
             <Music size={28} />
             <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter text-white">2. School of Arts №2</h2>
           </div>
           <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 bg-white/[0.02]">
             <div className="grid md:grid-cols-3">
               <div className="md:col-span-2 p-6 md:p-10 order-2 md:order-1">
-                <p className="text-purple-400 font-bold text-lg mb-3">September 2019 – June 2024</p>
+                <p className="text-blue-300 font-bold text-lg mb-3">September 2019 – June 2024</p>
                 <p className="text-gray-300 text-base md:text-lg leading-relaxed italic font-light">
                  Completed specialized music education in Folk Instruments <span className="text-white font-bold italic"> (Dombyra)</span>. Performed as a <span className="text-white font-bold italiс"> Principal Musician </span> in the orchestra, showcasing Kazakh cultural heritage.
                 </p>
@@ -213,7 +213,7 @@ export default function Home() {
         </section>
      {/* 3. ECONOMICS ACHIEVEMENTS + QAZ ECONOMICS */}
 <section className="mb-32">
-          <div className="flex items-center gap-4 mb-8 text-yellow-500 border-b border-white/10 pb-4">
+          <div className="flex items-center gap-4 mb-8 text-yellow-500 border-b border-red-900/30 pb-4">
             <Trophy size={28} />
             <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">3. Economics Achievements</h2>
           </div>
@@ -242,13 +242,13 @@ export default function Home() {
 
     </div> {/* Конец грида */}
             <div className="max-w-4xl">
-               <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic border-b border-white/5 pb-10">
+               <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic border-b border-red-900/30 pb-10">
                  Co-Author of an independent research paper on <span className="text-white font-bold">Market-Led Growth and the Development Assistance</span>, analyzing development strategies and the effectiveness of economic policy.
                </p>
 
 
                {/* QAZ ECONOMICS — ПОЛНЫЙ ТЕКСТ ТУТ */}
-               <div className="mt-12 p-8 md:p-10 bg-blue-500/5 rounded-[2.5rem] border border-blue-500/20">
+               <div className="mt-12 p-8 md:p-10 bg-blue-500/5 rounded-[2.5rem] border border-white/10">
                   <h4 className="text-blue-400 font-black uppercase text-sm mb-2 tracking-[0.2em]">Qaz Economics — Educational Organization</h4>
                   <p className="text-gray-500 text-xs italic mb-8 uppercase font-bold tracking-widest">August 2024 – Present</p>
                   <ul className="space-y-6 text-gray-300 text-lg md:text-xl font-light italic">
@@ -270,7 +270,7 @@ export default function Home() {
         </section>
 
         {/* 4. VOLUNTEER EXPERIENCE — ПОЛНЫЙ ТЕКСТ ТУТ */}
-        <section className="mb-32 border-t border-white/10 pt-16">
+        <section className="mb-32 border-t border-red-900/30 pt-16">
           <div className="flex items-center gap-4 mb-10 text-red-500">
             <Heart size={32} />
             <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">4. Volunteer Experience</h2>
@@ -298,7 +298,7 @@ export default function Home() {
         </section>
 
         {/* 5. SPORTS & LEADERSHIP */}
-        <section className="mb-24 border-t border-white/10 pt-16">
+        <section className="mb-24 border-t border-red-900/30 pt-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="p-8 rounded-[2.5rem] bg-orange-500/5 border border-orange-500/10">
               <Activity className="text-orange-500 mb-4" size={28} />
@@ -316,7 +316,7 @@ export default function Home() {
         </section>
 
 {/* 7. PROJECTS — ПОЛНЫЙ ТЕКСТ */}
-        <section className="mb-32 border-t border-white/10 pt-16">
+        <section className="mb-32 border-t border-red-900/30 pt-16">
           <div className="flex items-center gap-4 mb-12 text-emerald-400">
             <Send size={32} />
             <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">7. Projects</h2>
@@ -390,11 +390,10 @@ export default function Home() {
 
     {/* 5. FUN FACTS: PHOTO - TEXT - PHOTO */}
 <section className="max-w-6xl mx-auto px-6 mb-24">
-  <div className="flex items-center gap-4 mb-8 text-pink-400 border-b border-white/10 pb-4">
+<div className="flex items-center gap-4 mb-8 text-red-500 border-b border-red-900/30 pb-4">
     <Target size={28} />
     <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">Lastly... Fun Facts</h2>
   </div>
-  
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
     
     {/* Левая фотка */}
@@ -410,23 +409,23 @@ export default function Home() {
     <div className="bg-white/[0.03] p-6 rounded-3xl border border-white/5 shadow-2xl">
       <ul className="space-y-4 text-gray-300 text-sm md:text-base">
         <li className="flex items-start gap-2">
-          <span className="text-pink-500">•</span>
+          <span className="text-red-500">•</span>
           <span>I can solve a <strong>12-sided</strong> cubic Rubik’s cube</span>
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-pink-500">•</span>
-          <span>Self-taught on: <strong>guitar, piano,</strong> and <strong>domra</strong> ые(not same as dombyra)</span>
+          <span className="text-red-500">•</span>
+          <span>Self-taught on: <strong>guitar, piano,</strong> and <strong>domra</strong> (not same as dombyra)</span>
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-pink-500">•</span>
+          <span className="text-red-500">•</span>
           <span>I love <strong>Victoria’s Secret</strong> models (2016 & 2025 runways are fire)</span>
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-pink-500">•</span>
+          <span className="text-red-500">•</span>
           <span>I can code in <strong>Java, Python,</strong> and <strong>SQL</strong></span>
         </li>
         <li className="flex items-start gap-2">
-          <span className="text-pink-500">•</span>
+          <span className="text-red-500">•</span>
           <span>I am afraid of <strong>dogs</strong></span>
         </li>
       </ul>
@@ -445,13 +444,52 @@ export default function Home() {
 </section>
 
         {/* FOOTER */}
-        <footer className="border-t border-white/10 pt-16 flex flex-col md:flex-row justify-between gap-12 text-center md:text-left">
+        <footer className="border-t border-red-900/30 pt-16 flex flex-col md:flex-row justify-between gap-12 text-center md:text-left">
           <div>
             <h3 className="text-4xl md:text-6xl font-black italic uppercase tracking-tighter mb-4">Connect</h3>
             <a href="https://kz.linkedin.com/in/dariya-murzakhmetova-a6b645382" target="_blank" className="inline-flex items-center gap-3 text-blue-400 hover:text-white transition-all text-sm font-bold uppercase tracking-widest">
               <Linkedin size={24} /> LinkedIn Profile
             </a>
           </div>
+
+{/* ЦЕНТР: СЕРЫЕ ГЛАЗА ПАУКА */}
+  <div className="relative flex justify-center items-center px-10">
+    {/* Мягкое красное свечение вокруг (не такое яркое) */}
+    <div className="absolute inset-0 bg-red-700 blur-[35px] opacity-25"></div>
+    
+    <svg 
+      width="130" 
+      height="45" 
+      viewBox="0 0 140 50" 
+      className="relative z-10"
+    >
+      <defs>
+        {/* Градиент для эффекта линз (от серого к чуть более темному серебру) */}
+        <linearGradient id="eyeGray" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stopColor="#e5e5e5" />
+          <stop offset="100%" stopColor="#b0b0b0" />
+        </linearGradient>
+      </defs>
+  
+      {/* Левый глаз — агрессивный наклон внутрь */}
+      <path 
+        d="M10 5C40 2 65 25 60 45C35 45 5 35 10 5Z" 
+        fill="url(#eyeGray)" 
+        stroke="#800000" 
+        strokeWidth="3"
+        className="drop-shadow-[0_0_5px_rgba(255,0,0,0.5)]"
+      />
+      {/* Правый глаз — зеркально */}
+      <path 
+        d="M130 5C100 2 75 25 80 45C105 45 135 35 130 5Z" 
+        fill="url(#eyeGray)" 
+        stroke="#800000" 
+        strokeWidth="3"
+        className="drop-shadow-[0_0_5px_rgba(255,0,0,0.5)]"
+      />
+    </svg>
+  </div>
+
           <div className="space-y-4 md:space-y-6 text-xl md:text-2xl font-light italic">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
               <Phone className="text-gray-600 hidden md:block" size={24} /> <span>+7 701 210 00 45</span>
