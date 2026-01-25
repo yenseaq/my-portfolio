@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import { 
   Linkedin, Trophy, Music, Heart, Send, Youtube, 
-  Star, BookOpen, Activity, GraduationCap, Users, Lightbulb, Phone, Mail, Target
+  Star, BookOpen, Activity, GraduationCap, Users, Lightbulb, Phone, Mail, Target, Download, Briefcase
 } from "lucide-react";
 
 export default function Home() {
@@ -213,7 +213,7 @@ export default function Home() {
         </section>
      {/* 3. ECONOMICS ACHIEVEMENTS + QAZ ECONOMICS */}
 <section className="mb-32">
-          <div className="flex items-center gap-4 mb-8 text-yellow-500 border-b border-red-900/30 pb-4">
+          <div className="flex items-center gap-4 mb-8 text-yellow-500 border-b border-red-900/30 pb-12">
             <Trophy size={28} />
             <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">3. Economics Achievements</h2>
           </div>
@@ -239,13 +239,18 @@ export default function Home() {
               </div>
             </div>
 
-
     </div> {/* Конец грида */}
-            <div className="max-w-4xl">
-               <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic border-b border-red-900/30 pb-10">
+            <div className="max-w-4xl space-y-1 mb-10">
+               <p className="text-gray-300 text-lg md:text-xl leading-relaxed italic pb-10">
                  Co-Author of an independent research paper on <span className="text-white font-bold">Market-Led Growth and the Development Assistance</span>, analyzing development strategies and the effectiveness of economic policy.
                </p>
-
+              <a href="/ESC25614_International Aid & Export - led Growth.pdf" download 
+    className="flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full hover:bg-red-600/20 hover:border-red-600/50 transition-all group">
+    <span className="text-xs font-bold uppercase tracking-widest text-white">See Paper</span>
+    <Download size={14} className="text-red-500 group-hover:scale-110 transition-transform" />
+  </a>
+</div>
+<div className="w-full h-[1px] bg-red-600/20 mt-4"></div>
 
                {/* QAZ ECONOMICS — ПОЛНЫЙ ТЕКСТ ТУТ */}
                <div className="mt-12 p-8 md:p-10 bg-blue-500/5 rounded-[2.5rem] border border-white/10">
@@ -266,7 +271,6 @@ export default function Home() {
                     </li>
                   </ul>
                </div>
-            </div>
         </section>
 
         {/* 4. VOLUNTEER EXPERIENCE — ПОЛНЫЙ ТЕКСТ ТУТ */}
@@ -315,11 +319,97 @@ export default function Home() {
           </div>
         </section>
 
+  <section className="max-w-6xl mx-auto px-6 mb-24">
+  <div className="flex items-center gap-4 mb-10 text-white border-b border-red-900/30 pb-4">
+    {/* Основная иконка секции тоже может быть синей, если хочешь */}
+    <Briefcase size={28} className="text-blue-500" /> 
+    <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">Work & Programs</h2>
+  </div>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+    
+    {/* Aualine Intern */}
+    <div className="group">
+      <div className="bg-white/[0.03] p-8 rounded-3xl border border-white/5 hover:border-red-600/50 transition-all mb-6">
+        <h3 className="text-2xl font-bold text-white mb-1">Aualine Intern</h3>
+        <p className="text-red-500 font-bold mb-4 uppercase text-xs tracking-widest">Sales Department | Jan 2026 - Present</p>
+        <ul className="text-gray-400 space-y-3 text-sm">
+          <li className="flex gap-2"><span>•</span> An international company that produces ink from air pollution. </li>
+          <li className="flex gap-2"><span>•</span> Assisted the sales team with client outreach and communication.</li>
+          <li className="flex gap-2"><span>•</span> Conducted market research and organized sales data for lead generation</li>
+        </ul>
+      </div>
+      {/* МЕСТО ДЛЯ ФОТО AUALINE */}
+      <div className="rounded-2xl overflow-hidden border-2 border-white/5 aspect-video bg-gray-900">
+         <img src="/aualine.jpg" alt="Aualine Internship" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+      </div>
+    </div>
+
+    {/* IRIS Winter Scholars */}
+    <div className="group">
+      <div className="bg-white/[0.03] p-8 rounded-3xl border border-white/5 hover:border-red-600/50 transition-all mb-6">
+        <h3 className="text-2xl font-bold text-white mb-1">IRIS Winter Scholars</h3>
+        <p className="text-red-500 font-bold mb-4 uppercase text-xs tracking-widest">International Law | Jan 22 - 26, 2026</p>
+        <ul className="text-gray-400 space-y-3 text-sm">
+          <li className="flex gap-2"><span>•</span> 4-day online program on diplomacy, human rights, and global cooperation.</li>
+          <li className="flex gap-2"><span>•</span> Engaged in expert-led sessions and collaborative activities.</li>
+          <li className="flex gap-2"><span>•</span> Developed knowledge of international law and global awareness.</li>
+        </ul>
+      </div>
+      {/* МЕСТО ДЛЯ ФОТО IRIS */}
+      <div className="rounded-2xl overflow-hidden border-2 border-white/5 aspect-video bg-gray-900">
+         <img src="/iris.jpg" alt="IRIS Scholars" className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" />
+      </div>
+    </div>
+
+  </div>
+
+  {/* SAT Tutor */}
+  <div className="flex flex-col gap-4 mb-16"></div>
+<div className="group">
+  <div className="bg-white/[0.03] p-6 rounded-3xl border border-white/5 hover:border-blue-600/50 transition-all mb-6">
+    <div className="flex items-center gap-3 mb-2">
+      {/* Белый заголовок */}
+      <h3 className="text-2xl font-bold text-white">SAT Tutor</h3>
+    </div>
+    
+    <p className="text-red-500 font-bold mb-4 uppercase text-xs tracking-widest">
+      SchoolWorlds (College Board) | Jan 2026 - Present
+    </p>
+    
+    <ul className="text-gray-400 space-y-3 text-sm">
+      <li className="flex gap-2">
+        <span>•</span> 
+        Selected by the College Board as a tutor for SchoolWorlds initiative.
+      </li>
+      <li className="flex gap-2">
+        <span>•</span> 
+        Helping students worldwide strengthen their SAT performance and understanding.
+      </li>
+      <li className="flex gap-2">
+        <span>•</span> 
+      Starting new groups from February 6, 2026.
+      </li>
+    </ul>
+  </div>
+
+  {/* МЕСТО ДЛЯ ФОТО SAT / COLLEGE BOARD */}
+  <div className="rounded-2xl overflow-hidden border-2 border-white/5 aspect-video bg-gray-900/50">
+     <img 
+       src="/sat-tutor.jpg" 
+       alt="SAT Tutoring" 
+       className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" 
+     />
+  </div>
+</div>
+
+</section>
+
 {/* 7. PROJECTS — ПОЛНЫЙ ТЕКСТ */}
         <section className="mb-32 border-t border-red-900/30 pt-16">
           <div className="flex items-center gap-4 mb-12 text-emerald-400">
             <Send size={32} />
-            <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">7. Projects</h2>
+            <h2 className="text-3xl font-bold uppercase tracking-tighter text-white">Projects</h2>
           </div>
           
           <div className="space-y-12">
@@ -418,7 +508,7 @@ export default function Home() {
         </li>
         <li className="flex items-start gap-2">
           <span className="text-red-500">•</span>
-          <span>I love <strong>Victoria’s Secret</strong> models (2016 & 2025 runways are fire)</span>
+          <span>I had <strong>32 weeks</strong> streak in going to <strong>gym</strong></span>
         </li>
         <li className="flex items-start gap-2">
           <span className="text-red-500">•</span>
